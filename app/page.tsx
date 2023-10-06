@@ -10,7 +10,7 @@ export default function Home() {
     <QueryClientProvider client={queryClient}>
       <main>
         <h1>Governance Proposals</h1>
-        <div>
+        <div style={{ paddingBottom: "100px" }}>
           <Proposals />
         </div>
       </main>

@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body>
+      <body style={{ backgroundColor: "#f5f8fa" }}>
         <MantineProvider>
           <Navbar />
           <Container size="md">{children}</Container>
