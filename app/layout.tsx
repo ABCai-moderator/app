@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 
 import { MantineProvider, ColorSchemeScript, Container } from "@mantine/core";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 export const metadata = {
   title: "ABCAI Moderator",
