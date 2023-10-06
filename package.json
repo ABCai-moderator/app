@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cosmjs/launchpad": "^0.27.1",
+    "@cosmjs/proto-signing": "^0.31.1",
+    "@keplr-wallet/types": "^0.12.30",
     "@mantine/core": "^7.1.2",
     "next": "13.5.4",
     "postcss-preset-mantine": "^1.8.0",
