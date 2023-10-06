@@ -1,6 +1,6 @@
 import "@mantine/core/styles.css";
 
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { MantineProvider, ColorSchemeScript, Container } from "@mantine/core";
 import Navbar from "./navbar";
 
 export const metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <MantineProvider>
           <Navbar />
-          {children}
+          <Container size="md">{children}</Container>
         </MantineProvider>
       </body>
     </html>

@@ -1,7 +1,6 @@
 "use client";
 
-import { Menu, Group, Center, Burger, Container } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Group, Container } from "@mantine/core";
 import classes from "./HeaderMenu.module.css";
 
 const links = [
@@ -9,8 +8,6 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [opened, { toggle }] = useDisclosure(false);
-
   const items = links.map((link) => {
     return (
       <a key={link.label} href={link.link} className={classes.link}>
