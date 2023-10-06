@@ -1,14 +1,15 @@
 export default function Proposal({
+  number,
   title,
-  description,
 }: {
+  number: number;
   title: string;
-  description: string;
 }) {
   return (
     <div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3>
+        {number} {title}
+      </h3>
     </div>
   );
 }

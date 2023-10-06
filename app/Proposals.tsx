@@ -1,9 +1,17 @@
-import { useQuery, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 import { fetchProposals } from "./api-services";
+import Proposal from "./Proposal";
 
 export default function Proposals() {
-  const queryClient = useQueryClient();
   const query = useQuery("proposals", fetchProposals);
 
-  return <div>Hello</div>;
+  return query.data?.proposals?.map((proposal: any) => {
+    return (
+      <Proposal
+        key={proposal.id}
+        number={proposal.id}
+        title={proposal.messages[0].content.title}
+      />
+    );
+  });
 }
