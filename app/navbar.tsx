@@ -1,7 +1,7 @@
 "use client";
 
 import { Group, Container } from "@mantine/core";
-import classes from "./HeaderMenu.module.css";
+import classes from "./navbar.module.css";
 
 const links = [
   { link: "https://github.com/Vvaradinov/ABCAI-moderator", label: "Github" },
