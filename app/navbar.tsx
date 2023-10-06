@@ -24,8 +24,14 @@ export default function Navbar() {
         <div className={classes.inner}>
           <Group gap={5} visibleFrom="sm">
             <Image src="/icon-s.png" alt="" width={30} height={30} />
-            <Text size="md">
-              ABC<strong>AI</strong> Moderator
+            <Text
+              size="lg"
+              fw={700}
+              style={{
+                fontFamily: "monospace",
+              }}
+            >
+              ABC<span style={{ color: "#0489e5" }}>ai</span>++
             </Text>
           </Group>
 

@@ -5,7 +5,7 @@ import { Grid, Loader } from "@mantine/core";
 
 export default function Proposals() {
   const { data, isLoading } = useQuery("proposals", fetchProposals, {
-    refetchInterval: 1000,
+    refetchInterval: 2000,
   });
 
   if (isLoading && !data) {
