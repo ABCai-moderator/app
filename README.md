@@ -7,13 +7,9 @@ This is a [Next.js](https://nextjs.org/) frontend for the [ABCAI-moderator](http
 First, run the development server:
 
 ```bash
+cp .env.example .env
+# set the environment variables in .env then run
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
