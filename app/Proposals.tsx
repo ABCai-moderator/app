@@ -1,14 +1,29 @@
 import { useQuery } from "react-query";
 import { fetchProposals } from "./api-services";
 import Proposal from "./Proposal";
-import { Grid } from "@mantine/core";
+import { Grid, Loader } from "@mantine/core";
 
 export default function Proposals() {
-  const query = useQuery("proposals", fetchProposals, {
+  const { data, isLoading } = useQuery("proposals", fetchProposals, {
     refetchInterval: 1000,
   });
 
-  const proposals = query.data?.proposals?.map((proposal: any) => {
+  if (isLoading && !data) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "70vh",
+        }}
+      >
+        <Loader />
+      </div>
+    );
+  }
+
+  const proposals = data?.proposals?.map((proposal: any) => {
     return (
       <Grid.Col span={{ base: 12, md: 6 }} key={proposal.id}>
         <Proposal
