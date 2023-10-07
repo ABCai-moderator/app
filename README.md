@@ -1,4 +1,4 @@
-# ABCAI-moderator
+# abcAI-moderator
 
 This is a [Next.js](https://nextjs.org/) frontend for the [ABCAI-moderator](https://github.com/Vvaradinov/ABCAI-moderator) app chain hackathon project.
 

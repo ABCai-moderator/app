@@ -4,7 +4,7 @@ import { MantineProvider, ColorSchemeScript, Container } from "@mantine/core";
 import Navbar from "./Navbar";
 
 export const metadata = {
-  title: "ABCAI Moderator",
+  title: "abcAI Moderator",
   description: "An AI Based moderator using ABCI++",
 };
 

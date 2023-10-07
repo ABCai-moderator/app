@@ -31,7 +31,7 @@ export default function Navbar() {
                 fontFamily: "monospace",
               }}
             >
-              ABC<span style={{ color: "#0489e5" }}>ai</span>++
+              abc<span style={{ color: "#0489e5" }}>AI</span>++
             </Text>
           </Group>
 
