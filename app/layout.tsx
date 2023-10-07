@@ -1,7 +1,8 @@
 import "@mantine/core/styles.css";
 
 import { MantineProvider, ColorSchemeScript, Container } from "@mantine/core";
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
+import Providers from "./providers";
 
 export const metadata = {
   title: "ABCAI Moderator",
@@ -19,10 +20,12 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body style={{ backgroundColor: "#f5f8fa" }}>
-        <MantineProvider>
-          <Navbar />
-          <Container size="md">{children}</Container>
-        </MantineProvider>
+        <Providers>
+          <MantineProvider>
+            <Navbar />
+            <Container size="md">{children}</Container>
+          </MantineProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -1,20 +1,22 @@
 "use client";
 
-import { Group, Container, Text } from "@mantine/core";
+import { Group, Container, Text, NavLink } from "@mantine/core";
 import classes from "./Navbar.module.css";
 
 const links = [
+  { link: "/submit-proposal", label: "Submit Proposal" },
   { link: "https://github.com/Vvaradinov/ABCAI-moderator", label: "Github" },
 ];
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const items = links.map((link) => {
     return (
-      <a key={link.label} href={link.link} className={classes.link}>
+      <Link key={link.label} href={link.link} className={classes.link}>
         {link.label}
-      </a>
+      </Link>
     );
   });
 
@@ -22,19 +24,27 @@ export default function Navbar() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <Group gap={5} visibleFrom="sm">
-            <Image src="/icon-s.png" alt="" width={30} height={30} />
-            <Text
-              size="lg"
-              fw={700}
-              style={{
-                fontFamily: "monospace",
-              }}
-            >
-              ABC<span style={{ color: "#0489e5" }}>ai</span>++
-            </Text>
-          </Group>
+          <Link
+            href="/"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            <Group gap={5} visibleFrom="sm">
+              <Image src="/icon-s.png" alt="" width={30} height={30} />
 
+              <Text
+                size="lg"
+                fw={700}
+                style={{
+                  fontFamily: "monospace",
+                }}
+              >
+                ABC<span style={{ color: "#0489e5" }}>ai</span>++
+              </Text>
+            </Group>
+          </Link>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>

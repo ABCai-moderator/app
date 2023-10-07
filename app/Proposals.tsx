@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { fetchProposals } from "./api-services";
+import { fetchProposals } from "./utils/api-services/fetchProposals";
 import Proposal from "./Proposal";
 import { Grid, Loader } from "@mantine/core";
 
